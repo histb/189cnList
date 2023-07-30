@@ -1,0 +1,36 @@
+# OneDrive 配置项
+
+accounts:
+  # OneDrive 账号
+  # 可输入多组账号，但自定义名称不可相同
+  # 程序启动时会引导您手动获取 Refresh Token
+  #
+  # 请参考如下格式填写：
+  # <自定义名称>: <OneDrive 类型（0 为国际版，1 为世纪互联）>
+  #
+  # 例子：
+  # OneDrive_INTL: 0
+  # OneDrive_CN: 1
+
+cant_enterFolder:
+  # 加载目录时排除的文件夹名，正则 match
+  - "我的小秘密"
+
+cant_visFile:
+  # 加载目录时排除的文件名，正则 match
+  - "\\..*?"
+
+rootPath: "/"
+  # 根目录
+
+sys_checkTime: 65
+  # 程序自检任务时间间隔（秒，下同）
+
+sys_dataExpiredTime: 1200
+  # 文件目录缓存有效时间
+
+sys_dl_urlExpiredNum: 35
+  # 下载链接缓存的有效次数
+
+sys_dl_urlExpiredTime: 600
+  # 下载链接缓存的有效时间
