@@ -2,8 +2,8 @@
 
 accounts:
   #189cn:
-   # - "13602289521@189.cn"
-   # - "Gztea@302"
+  #  - "aaa@189.cn"
+  #  - "123456"
 
 cant_enterFolder:
   # 加载目录时排除的文件夹名，正则 match
