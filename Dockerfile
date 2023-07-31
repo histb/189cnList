@@ -2,8 +2,10 @@ FROM python:3.8-slim
 
 WORKDIR /usr/src
 
-RUN apt update \
-    && apt-get install -y binutils build-essential
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libffi-dev \
+    libssl-dev
     
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
