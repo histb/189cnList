@@ -2,15 +2,12 @@ FROM python:3.8-slim
 
 WORKDIR /usr/src
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    libffi-dev \
-    libssl-dev
-    
 COPY requirements.txt ./
+COPY whl/*.whl .
+RUN pip install *.whl
 RUN pip install --no-cache-dir -r requirements.txt
 
-VOLUME [ "/usr/src/app/config/", "/usr/src/app/templates/" ]
+VOLUME [ "/usr/src/app/config/", "/usr/src/templates/" ]
 COPY . .
 
 CMD [ "python", "-u", "./main.py" ]

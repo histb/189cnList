@@ -18,7 +18,11 @@
 * 简单的请求预处理机制
 
 ## 使用
-
+```
+sudo docker buildx build --platform linux/arm/v7 -t slitazcn/justlist:armv7 --push .
+sudo docker buildx build --platform linux/arm64 -t slitazcn/justlist:armv7 --push .
+sudo docker buildx build --platform linux/amd64 -t slitazcn/justlist:armv7 --push .
+```
 ### Docker
 
 - [Docker Hub](https://hub.docker.com/r/txperl/justlist)
