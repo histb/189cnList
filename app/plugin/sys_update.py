@@ -3,7 +3,7 @@ import traceback
 from altfe.interface.root import interRoot
 
 
-@interRoot.bind("sys/update/xxxiiixxx", "PLUGIN")
+@interRoot.bind("sys/update/hinas", "PLUGIN")
 class sys_update(interRoot):
     def run(self, cmd):
         apis = []
