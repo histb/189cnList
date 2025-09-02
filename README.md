@@ -19,9 +19,11 @@
 
 ## 使用
 ```
-sudo docker buildx build --platform linux/arm/v7 -t slitazcn/justlist:armv7 --push .
-sudo docker buildx build --platform linux/arm64 -t slitazcn/justlist:armv7 --push .
-sudo docker buildx build --platform linux/amd64 -t slitazcn/justlist:armv7 --push .
+sudo docker buildx imagetools create -t slitazcn/justlist:latest \
+  slitazcn/justlist:armv7 \
+  slitazcn/justlist:arm64 \
+  slitazcn/justlist:amd64
+
 ```
 ### Docker
 
